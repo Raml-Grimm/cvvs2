@@ -6,7 +6,7 @@ import gateway1, gateway2, time, os
 def CODECHECKER():
     banner = """
     
-  {y}.--------[ {g}CODECHECKER CLI {y}]-------------.
+  {y}.--------[ {g}UPDATED BLOODHUB {y}]-------------.
   {y}|  {r}- 2 Gateways                          {y}|
   {y}|  {r}- CCN / CVV Checkers                  {y}|
   {y}'----------------------------------------'
@@ -15,14 +15,13 @@ def CODECHECKER():
              - CHOOSE GATEWAY - 
    ----------------------------------------
   
-  {g}[1] {r} Gateway 1 CCN / CVV (Good on Amazon / Banned 5210 and 510)
-  {g}[2] {r} Gateway 2 CVV (5210/510)
+  {g}[1] {r} Gateway 1 CCN / CVV (Good on Amazon/Ali Banned 5210 and 510)
   
   """.format(g=Fore.GREEN, r=Fore.LIGHTRED_EX, y=Fore.YELLOW)
     print(banner)
     while True:
         try:
-            codechecker = input(Fore.RESET + 'codechecker >>> ')
+            codechecker = input(Fore.RESET + 'Select > ')
         except KeyboardInterrupt:
             print(Fore.RED + '\n[-] ' + Fore.RESET + 'Recieved Exit.')
             exit(1)
@@ -33,8 +32,7 @@ def CODECHECKER():
             print()
             print("""
         {re}             {g}_____________{re}
-        {re}------------{g}[ {r}CODECHECKER {g}]{re}------------
-        {re}------------{g}|- {r}GATEWAY 1 -{g}|{re}------------
+        {re}------------{g}|- {r}STRIPE GATEWAY 1 -{g}|{re}------------
         {re}---------------------------------------
         """.format(g=Fore.GREEN, r=Fore.RED, re=Fore.RESET))
             ranges = []
@@ -59,25 +57,13 @@ def CODECHECKER():
                 for x in credit_cards.split('\n'):
                     ccEntry += 1
                     try:
-                        gateway1.StripeAutomate(x, ccEntry, 'Odec', "Rillek")
+                        gateway1.StripeAutomate(x, ccEntry, 'Jason', "Anderson")
                     except KeyboardInterrupt:
                         break
             except KeyboardInterrupt:
                 pass
             print()
             print(Fore.GREEN + "[+] " + Fore.RESET + "Done on Gateway 1")
-            print()
-
-        elif codechecker == "2":
-            print()
-            print(Fore.YELLOW + "[*] " + Fore.RESET + "Starting Gateway 2...")
-            print()
-            try:
-                gateway2.Checker()
-            except KeyboardInterrupt:
-                pass
-            print()
-            print(Fore.GREEN + "[+] " + Fore.RESET + "Done on Gateway 2")
             print()
 
 
