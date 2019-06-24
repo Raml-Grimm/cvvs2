@@ -5,28 +5,6 @@ import gateway1, time, os
 
 def CODECHECKER():
     banner = """
-    
-  {y}.--------[ {g}UPDATED BLOODHUB {y}]-------------.
-  {y}|  {r}- 1 Gateway                           {y}|
-  {y}|  {r}- CCN / CVV Checkers                  {y}|
-  {y}'----------------------------------------'
-
-   ----------------------------------------
-             - CHOOSE GATEWAY - 
-   ----------------------------------------
-  
-  {g}[1] {r} Gateway 1 CCN / CVV (Good on Amazon/Ali Banned 5210 and 510)
-  
-  """.format(g=Fore.GREEN, r=Fore.LIGHTRED_EX, y=Fore.YELLOW)
-    print(banner)
-    while True:
-        try:
-            codechecker = input(Fore.RESET + 'Select > ')
-        except KeyboardInterrupt:
-            print(Fore.RED + '\n[-] ' + Fore.RESET + 'Recieved Exit.')
-            exit(1)
-
-        if codechecker == "1":
             print()
             print(Fore.YELLOW + "[*] " + Fore.RESET + "Starting Gateway 1...")
             print()
