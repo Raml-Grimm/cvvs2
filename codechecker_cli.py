@@ -1,13 +1,13 @@
 
 from colorama import Fore, init
-import gateway1, gateway2, time, os
+import gateway1, time, os
 
 
 def CODECHECKER():
     banner = """
     
   {y}.--------[ {g}UPDATED BLOODHUB {y}]-------------.
-  {y}|  {r}- 2 Gateways                          {y}|
+  {y}|  {r}- 1 Gateway                           {y}|
   {y}|  {r}- CCN / CVV Checkers                  {y}|
   {y}'----------------------------------------'
 
